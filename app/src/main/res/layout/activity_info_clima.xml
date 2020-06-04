@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvGrados"
+
+        android:layout_width="match_parent"
+        android:layout_height="115dp"
+        android:gravity="center"
+
+        android:text="@string/grados"
+        android:layout_marginTop="100dp"
+        android:textColor="@color/colorAccent"
+        android:textSize="80sp" />
+
+    <TextView
+        android:id="@+id/tvCiudad"
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:gravity="center"
+
+        android:text="@string/ciudad"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="50dp"
+        android:textColor="@color/colorAccent"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/tvEstado"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+
+        android:gravity="center"
+        android:text="@string/estado"
+        android:textColor="#00BCD4"
+        android:textSize="24sp" />
+</LinearLayout>

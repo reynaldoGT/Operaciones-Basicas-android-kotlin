@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">OperacionesBasicas</string>
+    <string name="descripcion">Descripcion</string>
+    <string name="titulo">Titulo</string>
+    <string name="title_factorial">Calcular Factorial</string>
+    <string name="calcularF">Ingrese Número</string>
+    <string name="raiz_cuadrada">Calcular Raiz Cuadrada</string>
+
+    <string name="clima">Clima</string>
+    <string name="grados">Grados°</string>
+    <string name="ciudad">Ciudad</string>
+    <string name="estado">Estado</string>
+
+    <string name="wellcome">Bienvendo a la app del clima,
+    para poder ver el clima clikea abajo :D</string>
+
+    <string name="texto_boton_lapaz">La Paz</string>
+    <string name="txt_oruro">Oruro</string>
+    <string name="txt_potosi">Potosi</string>
+
+    <string name="txt_cochabamba">Cochabamba</string>
+    <string name="txt_tarija">Tarija</string>
+    <string name="txt_chuquisaca">Chiquisaca</string>
+
+    <string name="texto_boton_pando">Pando</string>
+    <string name="texto_boton_santaCurz">Santa Cruz</string>
+    <string name="texto_boton_beni">Beni</string>
+
+    <string name="porcentaje_titulo">Averiguar el Porcentaje de una Cantidad</string>
+
+    <string name="pedir_Numero">Ingrese número </string>
+    <string name="radio_title">Ingrese Radio del Circulo</string>
+
+    <string name="radio_hint">Radio del Circulo</string>
+
+
+</resources>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/layout_per"
+    tools:context=".Porcentaje">
+
+    <TextView
+        android:id="@+id/tvPerTitle"
+        android:layout_width="229dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="@string/porcentaje_titulo"
+        android:textAlignment="center"
+        android:layout_marginBottom="16dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+
+    <EditText
+        android:id="@+id/edNumeroCalcular"
+        android:layout_width="195dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:hint="@string/pedir_Numero"
+        android:layout_gravity="center"
+        android:inputType="number" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+
+    <TextView
+        android:id="@+id/tvPorcentaje"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        android:layout_width="106dp"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+</LinearLayout>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_ciudad"
+    android:orientation="vertical"
+    tools:context=".Clima">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="16dp"
+        android:text="@string/wellcome"
+        android:textSize="13dp" />
+
+    <Button
+        android:id="@+id/btn_lp"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10sp"
+        android:text="@string/texto_boton_lapaz"
+        android:textColor="#593030" />
+
+
+<Button
+        android:id="@+id/btn_oruro"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10sp"
+        android:text="@string/txt_oruro"
+        android:textColor="#593030" />
+    <Button
+        android:id="@+id/btn_potosi"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10sp"
+        android:text="@string/txt_potosi"
+        android:textColor="#593030" />
+    <Button
+        android:id="@+id/btn_cochabamba"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10sp"
+        android:text="@string/txt_cochabamba"
+        android:textColor="#593030" />
+    <Button
+        android:id="@+id/btn_tarija"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10sp"
+        android:text="@string/txt_tarija"
+        android:textColor="#593030" />
+    <Button
+        android:id="@+id/btn_chuquisaca"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10sp"
+        android:text="@string/txt_chuquisaca"
+        android:textColor="#593030" />
+    <Button
+        android:id="@+id/btn_beni"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10sp"
+        android:text="@string/texto_boton_beni"
+        android:textColor="#593030" />
+    <Button
+        android:id="@+id/santa_cruz"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10sp"
+        android:text="@string/texto_boton_santaCurz"
+        android:textColor="#593030" />
+    <Button
+        android:id="@+id/btn_pando"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10sp"
+        android:text="@string/texto_boton_pando"
+        android:textColor="#593030" />
+
+</LinearLayout>
