@@ -1,5 +1,6 @@
 package com.example.operacionesbasicas
 
+import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -14,79 +15,74 @@ import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
 import com.example.operacionesbasicas.clima.Ciudad
 import com.example.operacionesbasicas.clima.VerRed
+import com.example.operacionesbasicas.databinding.ActivityClimaBinding
+import com.example.operacionesbasicas.databinding.ActivityInfoClimaBinding
 import com.google.gson.Gson
 import kotlinx.android.synthetic.main.activity_info_clima.*
 
 class Clima : AppCompatActivity() {
+
+    private lateinit var binding: ActivityClimaBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_clima)
-
+        //2 using the binding in activities
+        binding = ActivityClimaBinding.inflate((layoutInflater))
+        // 3
+        setContentView(binding.root)
         val TAG = "xd"
 
 
-        val Bla_paz = findViewById<Button>(R.id.btn_lp)
-        val Boruro = findViewById<Button>(R.id.btn_oruro)
-        val Bpotosi = findViewById<Button>(R.id.btn_potosi)
-
-        val Bcochabamba = findViewById<Button>(R.id.btn_cochabamba)
-        val Btarija = findViewById<Button>(R.id.btn_tarija)
-        val Bchuquisaca = findViewById<Button>(R.id.btn_chuquisaca)
-
-        val Bbeni = findViewById<Button>(R.id.btn_beni)
-        val BsantaCruz = findViewById<Button>(R.id.santa_cruz)
-        val Bpando = findViewById<Button>(R.id.btn_pando)
-
-        Bla_paz.setOnClickListener(View.OnClickListener {
+        binding.btnLp.setOnClickListener {
             val intent = Intent(this, InfoClima::class.java)
             intent.putExtra(TAG, "3911925")
             startActivity(intent)
-        })
+        }
 
-        Boruro.setOnClickListener(View.OnClickListener {
+        binding.btnOruro.setOnClickListener {
             val intent = Intent(this, InfoClima::class.java)
             intent.putExtra(TAG, "3909233")
             startActivity(intent)
-        })
+        }
 
-        Bpotosi.setOnClickListener(View.OnClickListener {
+        binding.btnPotosi.setOnClickListener {
             val intent = Intent(this, InfoClima::class.java)
             intent.putExtra(TAG, "4404348")
             startActivity(intent)
-        })
+        }
 
-        Bcochabamba.setOnClickListener(View.OnClickListener {
+        binding.btnCochabamba.setOnClickListener {
             val intent = Intent(this, InfoClima::class.java)
             intent.putExtra(TAG, "3919966")
             startActivity(intent)
-        })
+        }
 
-        Bchuquisaca.setOnClickListener(View.OnClickListener {
+        binding.btnChuquisaca.setOnClickListener {
             val intent = Intent(this, InfoClima::class.java)
             intent.putExtra(TAG, "3920177")
             startActivity(intent)
-        })
-        Btarija.setOnClickListener(View.OnClickListener {
+        }
+        binding.btnChuquisaca.setOnClickListener {
             val intent = Intent(this, InfoClima::class.java)
             intent.putExtra(TAG, "3903319")
             startActivity(intent)
-        })
+        }
 
-        BsantaCruz.setOnClickListener(View.OnClickListener {
+        binding.btnSantaCruz.setOnClickListener {
             val intent = Intent(this, InfoClima::class.java)
             intent.putExtra(TAG, "6356861")
             startActivity(intent)
-        })
-        Bbeni.setOnClickListener(View.OnClickListener {
+        }
+        binding.btnBeni.setOnClickListener {
             val intent = Intent(this, InfoClima::class.java)
             intent.putExtra(TAG, "3923172")
             startActivity(intent)
-        })
-        Bpando.setOnClickListener(View.OnClickListener {
+        }
+        binding.btnPando.setOnClickListener {
             val intent = Intent(this, InfoClima::class.java)
             intent.putExtra(TAG, "3908600")
             startActivity(intent)
-        })
+        }
     }
 }
 

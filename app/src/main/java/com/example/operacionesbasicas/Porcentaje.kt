@@ -12,6 +12,7 @@ import android.widget.Toast
 import com.google.android.material.snackbar.Snackbar
 
 class Porcentaje : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_porcentaje)

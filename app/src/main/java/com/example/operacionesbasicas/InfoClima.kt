@@ -3,23 +3,30 @@ package com.example.operacionesbasicas
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.widget.TextView
-import android.widget.Toast
+import android.view.View
 import com.android.volley.Request
 import com.android.volley.Response
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
 import com.example.operacionesbasicas.clima.Ciudad
 import com.example.operacionesbasicas.clima.VerRed
+import com.example.operacionesbasicas.databinding.ActivityInfoClimaBinding
 
 import com.google.gson.Gson
-import kotlinx.android.synthetic.main.activity_info_clima.*
 
 class InfoClima : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_info_clima)
 
+
+    private lateinit var binding: ActivityInfoClimaBinding
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+
+
+        super.onCreate(savedInstanceState)
+        //2 using the binding in activities
+        binding = ActivityInfoClimaBinding.inflate((layoutInflater))
+        // 3
+        setContentView(binding.root)
 
         val ciudad = intent.getStringExtra("xd")
 
@@ -39,61 +46,24 @@ class InfoClima : AppCompatActivity() {
     }
 
 
-    private fun solitcitidWithVolley(url: String) {
-        var URL =
-            "https://api.openweathermap.org/data/2.5/weather?id=3435910&appid=1df4b54c2551746c00253fd4a88eedb4&units=metric&lang=es"
-        val queue = Volley.newRequestQueue(this)
-
-        val solicitud =
-            StringRequest(Request.Method.GET, url, Response.Listener<String> { response ->
-                try {
-                    Log.d("solicitud por volley", response)
-                    //usando la libreria gson para parsear
-                    val gson = Gson()
-                    val ciudad = gson.fromJson(response, Ciudad::class.java)
-
-                    tvCiudad?.text = ciudad.name
-                    tvGrados.text = (ciudad.main?.temp).toString() + "°"
-                    tvEstado.text = ciudad.weather?.get(0)?.description
-
-
-                } catch (e: Exception) {
-
-                }
-            }, Response.ErrorListener { error ->
-                Log.d("solicitud por volley", error.message)
-
-            })
-        queue.add(solicitud)
-
-    }
-
     private fun Ciudad_id(id: String) {
         val URL =
             "https://api.openweathermap.org/data/2.5/weather?id=$id&appid=1df4b54c2551746c00253fd4a88eedb4&units=metric&lang=es"
         val queue = Volley.newRequestQueue(this)
 
-        val solicitud =
+        val request =
             StringRequest(Request.Method.GET, URL, Response.Listener<String> { response ->
                 try {
-//                    Log.d("solicitud por volley", response)
-                    //usando la libreria gson para parsear
+
                     val gson = Gson()
                     val ciudad = gson.fromJson(response, Ciudad::class.java)
 
-                    Log.d("success", ciudad.name)
-                    var tvCiudad: TextView? = null
-                    var tvGrados: TextView? = null
-                    var tvEstatus: TextView? = null
+                    binding.progressBar.visibility = View.GONE
+                    binding.lyClima.visibility = View.VISIBLE
 
-
-                    tvCiudad = findViewById(R.id.tvCiudad)
-                    tvGrados = findViewById(R.id.tvGrados)
-                    tvEstatus = findViewById(R.id.tvEstado)
-
-                    tvCiudad?.text = ciudad.name
-                    tvGrados?.text = ciudad.main?.temp.toString() + "°"
-                    tvEstatus?.text = ciudad.weather?.get(0)?.description
+                    binding.tvCiudad.text = ciudad.name
+                    binding.tvGrados.text = ciudad.main?.temp.toString() + "°"
+                    binding.tvEstado.text = ciudad.weather?.get(0)?.description?.toUpperCase()
 
 
                 } catch (e: Exception) {
@@ -102,8 +72,10 @@ class InfoClima : AppCompatActivity() {
             }, Response.ErrorListener { error ->
                 Log.d("Error en el listener", error.message)
 
+                binding.progressBar.visibility = View.VISIBLE
+                binding.lyClima.visibility = View.GONE
             })
-        queue.add(solicitud)
+        queue.add(request)
 
     }
 

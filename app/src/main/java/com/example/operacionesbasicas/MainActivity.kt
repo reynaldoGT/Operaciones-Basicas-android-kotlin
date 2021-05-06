@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        var titulos = ArrayList<Titulo_grid>()
+        val titulos = ArrayList<Titulo_grid>()
         titulos.add(
             Titulo_grid(
                 "Factorial de un numero",

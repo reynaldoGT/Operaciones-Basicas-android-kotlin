@@ -8,4 +8,5 @@
     <color name="color_grados">#ffffff</color>
     <color name="color_ciudad">#F2F7FB</color>
     <color name="color_stattus">#445FCC</color>
+    <color name="background_grid">#e5e5e5</color>
 </resources>
